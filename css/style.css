@@ -32,7 +32,12 @@ h1, h2 {
   text-transform: uppercase;
   color: #3c3c3c;
   text-align: center; }
-  h1 span, h2 span {
+  h1 span {
+    display: block;
+    font-size: 35px;
+    line-height: 40px;
+    color: #727272; }
+  h2 span {
     display: block;
     font-size: 35px;
     line-height: 40px;
@@ -984,7 +989,7 @@ main {
 =========================================================*/
 footer {
   position: relative;
-  padding-top: 85px; }
+  /*padding-top: 85px;*/ }
   @media (max-width: 479px) {
     footer {
       padding: 0; } }

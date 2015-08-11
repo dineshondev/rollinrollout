@@ -4,15 +4,14 @@
   <title>Home</title>
   <meta charset="utf-8">
   <meta name="format-detection" content="telephone=no"/>
+  <meta name="keywords" content="Sliding door repair sarasota, Roller repair, Track repair, Patio Glass Door Adjustment & Alignment, Locks Replacement">
+  <meta name="description" content="We offer roller & track repair and installation. Door Adjustment & Alignment. Screen and Patio Doors repair. Handles & Locks Replacement, Fire Safety Check.">
+  <meta name="robots" content="follow, index">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/camera.css">
   <link rel="stylesheet" href="css/style.css">
-
-  <script src="js/jquery.js"></script>
-  <script src="js/jquery-migrate-1.2.1.js"></script>
-
-  <!--[if lt IE 9]>
+<!--[if lt IE 9]>
   <html class="lt-ie9">
   <div style=' clear: both; text-align:center; position: relative;'>
     <a href="http://windows.microsoft.com/en-US/internet-explorer/..">
@@ -22,11 +21,9 @@
   </div>
   <script src="js/html5shiv.js"></script>
   <![endif]-->
-
-  <script src='js/device.min.js'></script>
 </head>
 <body>
-<div class="page">
+<div itemscope itemtype="http://schema.org/LocalBusiness" class="page">
   <!--========================================================
                             HEADER
   =========================================================-->
@@ -36,9 +33,9 @@
         <p class="brand_name">
           <a href="./"><img class="logo" src="images/logo.png" alt="Glass Sliding Doors Repair"></a>
         </p>
-        <p class="brand_slogan">
+        <h1 class="brand_slogan">
           Glass Sliding Doors Repair
-        </p>
+        </h1>
       </div>
     </div>
     <div id="stuck_container" class="stuck_container">
@@ -116,7 +113,7 @@
         <div class="contact">
           <a href="tel:+19413209010">
             <span class="fa fa-phone"></span>          
-            <span class="contact_num">(941) 320-9010</span>
+            <span itemprop="telephone" class="contact_num">(941) 320-9010</span>
             <p>Call us for a <strong>FREE</strong> Estimate</p>
           </a>
         </div>
@@ -234,11 +231,11 @@
               <div class="box2_aside">
                 <img class="circle" src="images/DanCormier.png" alt="">
               </div>
-              <div class="box2_cnt box2_cnt__no-flow">
-                <h4>Dan Cormier</h4>
+              <div itemprop="review" itemscope itemtype="http://schema.org/Review" class="box2_cnt box2_cnt__no-flow">
+                <h4><span itemprop="author">Dan Cormier</span></h4>
                 <blockquote class="quote">
-                  <p><img class="quotes" src="images/quotes.png" alt=""> We hired these guys and BAM, they came promptly, worked quickly and efficiently, charged a fair price, and our doors have never worked better. True competence.   Extremely friendly and polite... </p>  
-                  <a class="btn" href="about-us.html">read more</a>
+                  <p><img class="quotes" src="images/quotes.png" alt="review"> <span itemprop="reviewBody">We hired these guys and BAM, they came promptly, worked quickly and efficiently, charged a fair price, and our doors have never worked better. True competence.   Extremely friendly and polite... </span></p>  
+                  <a class="btn" href="https://plus.google.com/106860301252794230583">read more</a>
                 </blockquote>                
               </div>
             </div>
@@ -336,9 +333,10 @@
         <div class="contact-block bg1">
           <div class="contact-inner">
             <h3>contact us</h3>
-            <a href="tel:+19413209010">(941) 320 9010</a>
-            <address class="addr">
-              3865 Alamanda Drive, <br>Sarasota Fl 34238
+            <a href="tel:+19413209010"><span itemprop="telephone">(941) 320 9010</span></a>
+            <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="addr">
+              <span itemprop="streetAddress">3865 Alamanda Drive,</span> <br>
+              <span itemprop="addressLocality">Sarasota</span> <span itemprop="addressRegion">Fl</span> <span itemprop="postalCode">34238</span> 
             </address>
             <ul class="social-list">
               <!--<li><a href="#"><span class="fa fa-twitter"></span></a></li>-->
@@ -357,6 +355,21 @@
   </footer>
 </div>
 
-<script src="js/script.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-migrate-1.2.1.js"></script>
+  <script src='js/device.min.js'></script>
+  <script src="js/script.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60498312-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 </body>
 </html>
