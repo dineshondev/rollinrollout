@@ -94,6 +94,8 @@ a {
     outline: none; }
   a:active {
     background-color: transparent; }
+  a.backlink {
+        color: orange; }
 
 a[href^="tel:"],
 a[href^="callto:"] {

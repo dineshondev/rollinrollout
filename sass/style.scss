@@ -118,6 +118,10 @@ a {
     }
 
     @include transition(.3s);
+
+    .backlink {
+        color: orange;
+    }
 }
 
 a[href^="tel:"],
