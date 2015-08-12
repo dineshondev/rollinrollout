@@ -1,9 +1,9 @@
 <?php
-	$owner_email='reachrdinesh@gmail.com'; 
+	$owner_email='reachrdinesh@gmail.com';
 	//SMTP server settings	
 	$host = '';
     $port = '465';//"587";
-    $username = ''; 
+    $username = '';
     $password = '';
 
     $subject='A message from your site visitor ';
@@ -50,36 +50,33 @@
 
 try{
 	include "libmail.php";
+	$m= new Mail("utf-8");
+	$m->From($user_email);
+	$m->To($owner_email);
+	$m->Subject($subject);
+	$m->Body($message_body,$message_type);
+	//$m->log_on(true);
 
-	foreach ($owner_email as $owner_email_item) {
-		$m= new Mail("utf-8");
-		$m->From($user_email);
-		$m->To($owner_email_item);
-		$m->Subject($subject);
-		$m->Body($message_body,$message_type);
-		//$m->log_on(true);
+	if(isset($_FILES['attachment'])){
+		if($_FILES['attachment']['size']>$max_file_size){
+			$error_text=$error_text_filesize . ' ' . $max_file_size . 'bytes';
+			die($error_text);			
+		}else{			
+			if(preg_match($file_types,$_FILES['attachment']['name'])){
+				$m->Attach($_FILES['attachment']['tmp_name'],$_FILES['attachment']['name'],'','attachment');
+			}else{
+				$error_text=$error_text_filetype;
+				die($error_text);				
+			}
+		}		
+	}
+	if(!$use_smtp){
+		$m->smtp_on( $host, $username, $password, $port);
+	}
 
-		if(isset($_FILES['attachment'])){
-			if($_FILES['attachment']['size']>$max_file_size){
-				$error_text=$error_text_filesize . ' ' . $max_file_size . 'bytes';
-				die($error_text);			
-			}else{			
-				if(preg_match($file_types,$_FILES['attachment']['name'])){
-					$m->Attach($_FILES['attachment']['tmp_name'],$_FILES['attachment']['name'],'','attachment');
-				}else{
-					$error_text=$error_text_filetype;
-					die($error_text);				
-				}
-			}		
-		}
-		if(!$use_smtp){
-			$m->smtp_on( $host, $username, $password, $port);
-		}
-
-		$m->Send();
+	if($m->Send()){
+		die('success');
 	}	
-
-	die('success'); 
 	
 }catch(Exception $mail){
 	die($mail);
