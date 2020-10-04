@@ -15,14 +15,15 @@ img {
   max-width: 100%;
   height: auto; }
 
+/*
 h1 {
   font-size: 80px;
   line-height: 48px;
   text-transform: uppercase;
-  color: #fff; }
-
-h2 {
-  margin-top: 100px;
+  color: #3c3c3c; }
+*/
+h1, h2 {
+  margin-top: 50px;
   margin-bottom: 50px;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 60px;
@@ -31,6 +32,11 @@ h2 {
   text-transform: uppercase;
   color: #3c3c3c;
   text-align: center; }
+  h1 span {
+    display: block;
+    font-size: 35px;
+    line-height: 40px;
+    color: #727272; }
   h2 span {
     display: block;
     font-size: 35px;
@@ -88,6 +94,8 @@ a {
     outline: none; }
   a:active {
     background-color: transparent; }
+  a.backlink {
+        color: orange; }
 
 a[href^="tel:"],
 a[href^="callto:"] {
@@ -983,7 +991,7 @@ main {
 =========================================================*/
 footer {
   position: relative;
-  padding-top: 85px; }
+  /*padding-top: 85px;*/ }
   @media (max-width: 479px) {
     footer {
       padding: 0; } }
